@@ -1,0 +1,286 @@
+*{ /*El asterisco va a afectar a todo el cuerpo*/
+    box-sizing: border-box; /*Para que los elementos queden con el margen que se les está asignando*/
+}
+
+html{
+    scroll-behavior: smooth; /*Para que el navbar nos envíe a las secciones de la página en forma más lenta*/
+}
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0; /*Aquí se quitó el margen al body*/
+}
+
+/*Se asignan tamaños de fuente a los títulos y párrafos, por ejemplo*/
+h1{ font-size: 3.5em;}
+h2{font-size: 2.7em;}
+h3{font-size: 3em;}
+p{font-size: 1.25em;} /* em significa que será al tamaño relativo de la fuente*/
+ul{list-style: none;} /*Para quitar los puntos de la etiqueta lista que está en HTML*/
+
+button{
+    font-size: 1em;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 10px; /*borde circulares*/
+    border: 2px solid rgb(10, 14, 119);
+    box-shadow: 2px 2px 10px rgb(38, 123, 176); /*sombra*/
+    color: white;
+    background-color: dodgerblue; 
+}
+
+button:hover{
+    background-color: rgb(109, 199, 213); /*Este le dará el sombreado cuando pase el cursos por encima del botón*/
+}
+
+.container{ /*Este sirve para que el contenido se centre y no se mueva más allá del pixelaje que estamos seleccionando*/
+    max-width: 1400px;
+    margin: auto;
+}
+
+.color-acento{
+    color: darkblue; /*Este se va a usar en el HTML para acentuar con un color dentro del h2*/
+}
+
+header{
+    background-color: rgb(193, 193, 231);
+}
+
+header .logo{ /*Aquí se está usando la clase que está dentro del header por eso se está llamando de esta manera */
+    margin: 0;
+    padding: 25px 30px ; /*Padding se lee arriba a abajo la primera cifra y la segunda a los costados*/
+    font-weight: bold; /*Fuente en negritas*/
+    color:rgb(10, 14, 119); /*Para darle color de acento*/
+    font-size: 1.8em; /*Tamaño de fuente y el em para que la fuente se adecue*/
+}
+
+header .container{ /*Aquí se está usando la clase que está dentro del header por eso se está llamando de esta manera */
+    display: flex; /*Para centrarlo*/
+    flex-direction: column;/*Para que se ordene en una columna*/
+    align-items: center;/*Para centrarlos horizontalmente*/
+
+}
+
+header nav{ /*Que se reflejará en la barra de navegación*/
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none; /*Para quitar las líneas que se marcan abajo*/
+    font-weight: bold;/* Fuente en negritas*/
+    color: black;
+}
+
+header a:hover{ /*Para poner el sombreado sobre la barra de navegación cuando pasemos el cursor encima*/
+    color: rgb(10, 14, 119);
+}
+
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column; 
+    height: 90vh;/* vh es una altura relativa que va cambiando de acuerdo al tamaño de la pantañlla*/
+
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5) /*se le puso el gradiente ala imagen para el fondo, con la finalidad de que se vea más contraste*/
+    )
+    ,url("/media/blue_piscina.jpg"); /*Aquí se inserta la imagen*/
+    
+    background-repeat: no-repeat;/*Para el posicionamiento de mi fondo*/
+    background-size: cover;
+    background-position: center center; /* Ahora se mentiene centrado independientemente de la pantalla*/ 
+}
+
+#hero h1{
+    color: white;
+}
+
+#hero button{
+    font-size: 1.75em;
+}
+
+#ideas-reales .container{
+    text-align: center;
+    padding: 200px 12px;
+}
+
+#nuestros-productos{
+    background-color: rgb(30, 30, 30);
+    color: white;
+    text-align: center;
+}
+
+#nuestros-productos .container{
+    padding: 100px 0px; /* 100 arriba y abajo y 0 a los costados*/
+}
+
+#nuestros-productos h2{
+    margin-top: 0;
+    font-size: 3.2em;
+}
+
+
+#nuestros-productos p{
+    display: none;
+}
+
+#nuestros-productos .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px;
+    margin: 20px ;
+    border-radius: 15px;
+}
+
+.carta:first-child{ /*Como tenemos varias clases hay que seleccionar a qué número de hijo nos estamos refiriendo. En este caso es el primero*/
+
+    background-image: linear-gradient(
+        0deg,
+        rgb(33, 33, 48),
+        rgb(33, 33, 48) /*se le puso el gradiente ala imagen para el fondo, con la finalidad de que se vea más contraste*/
+    )
+    ,url("/media/jacuzzi1.jpg"); /*Aquí se inserta la imagen*/
+    background-size: cover;
+    background-position: center center; /* Ahora se mentiene centrado independientemente de la pantalla*/ 
+
+}
+
+.carta:nth-child(2){ /*Aquí en el paréntesis se coloca el número de hijo al que se hace referencia. Aquí es el segundo*/
+
+    background-image: linear-gradient(
+        0deg,
+        rgb(33, 33, 48),
+        rgb(33, 33, 48) /*se le puso el gradiente ala imagen para el fondo, con la finalidad de que se vea más contraste*/
+    )
+    ,url("/media/jacuzzi2.jpg"); /*Aquí se inserta la imagen*/
+    background-size: cover;
+    background-position: center center; /* Ahora se mentiene centrado independientemente de la pantalla*/ 
+
+}
+
+.carta:nth-child(3){ /*Aquí es el tercero*/
+    background-image: linear-gradient(
+        0deg,
+        rgb(33, 33, 48),
+        rgb(33, 33, 48) /*se le puso el gradiente ala imagen para el fondo, con la finalidad de que se vea más contraste*/
+    )
+    ,url("/media/instalando.jpg"); /*Aquí se inserta la imagen*/
+    background-size: cover;
+    background-position: center center; /* Ahora se mentiene centrado independientemente de la pantalla*/ 
+}
+
+#caracteristicas .container{ /*Al container se le pone punto porque es un selector de clase*/
+    text-align: center;
+    padding: 200px 12px;
+}
+
+#caracteristicas li{ /*A li no se le ponea punto porque es una selector de etiqueta*/
+    margin: 15px 0px;
+    font-weight: bold;
+}
+
+#cotizaciones{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(33, 33, 48);
+    color: white;
+    height: 80vh; /*vh es para que ocupe el 80% de mi pantalla*/
+}
+
+#cotizaciones h2{
+    font-size: 9vw; /*El vw se usa para que el tamaño de la fuente vaya cambiando en relación al tamaño de la pantalla*/
+}
+
+#cotizaciones button{
+    font-size: 5vw; /*El vw se usa para que el tamaño de la fuente vaya cambiando en relación al tamaño de la pantalla*/
+}
+
+
+footer{
+    background-color: rgb(33, 33, 48);
+}
+
+footer p{
+    margin: 0;
+    padding: 12px; /*Para que no se pegue tanto al final de la página*/
+    color: rgb(171, 171, 184);
+}
+
+footer .container{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+
+/*Aplicamos los estilos para el mediaquery de la presentación de escritorio*/
+@media (min-width: 720px) /*Cuando la pantalla tenga este pixelaje*/{
+
+    header{ /*Queremos que el header se quede fijo en la pantalla al escrollear entonces daremos los siguientes estilos*/
+        position: fixed; /*aL usar fixed es necesario volver a señalar el width (ancho(*/
+        width: 100%;
+    } 
+    
+    header .container{
+        /*Es importante que use los mismos selectores que se usaron al inicio, por ejemplo como en este mismo header .container que usé arriba para que los nuevos estilos que le estoy asignando se reflejen*/
+        flex-direction: row;
+        justify-content: space-between; /*Para separar los elementos, que header logo se vaya a una esquina y header a quede en la otra*/
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px; /*Para darle espacio a los costados*/ 
+    }
+
+    #hero h1{
+        font-size: 5em;
+    }
+
+    #ideas-reales .container{
+        display: flex;
+        justify-content: space-evenly; /*Se usa para que la los elementos se separen a la misma distancia cuando hacemos grande la pantalla*/
+    }
+
+    #ideas-reales .texto{ /*Aquí vamos a modificar el contenedor del texto que metimos en otro div en HTML para que lo tomará como otra columna y se puediera modificar a lado de la imagen*/
+        width: 50%;
+        max-width: 600px; /*Ancho máximo a lo que se va a estirar el texto en la pantalla*/
+        text-align:initial ;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+       justify-content: center; 
+    }
+
+    #ideas-reales h2{
+        margin-top: 0px; /*Se le quita el margin para que nos deje centrarlo*/
+    }
+
+    #ideas-reales .img-container{
+        background-image: linear-gradient(
+            0deg,
+            rgba(131, 140, 141, 0.5),
+            rgba(188, 197, 149, 0.5)
+            
+        ), url(/media/jacuzzi1.jpg);
+        background-size: cover;
+        background-position: center center;
+        height: 350px;
+        width: 30%;
+        
+    }
+
+}
+
